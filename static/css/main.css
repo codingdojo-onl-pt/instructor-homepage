@@ -2,8 +2,22 @@
   font-family: "Hermit", "Consolas", "Source Code Pro", monospace;
 }
 
-h1, h2, h3, h4, ul, ol {
+h1,
+h2,
+h3,
+h4,
+ul,
+ol {
   margin: 0;
+}
+
+a,
+a:visited {
+  color: blue;
+}
+
+a:hover {
+  color: #00fa00;
 }
 
 html {
@@ -45,6 +59,9 @@ html {
   flex-grow: 1;
   background-color: #a8a8a8c5;
   transition: border 0.2s;
+}
+.content i {
+  color: orange;
 }
 
 .content:hover {
