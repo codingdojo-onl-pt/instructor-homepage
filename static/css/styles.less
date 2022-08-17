@@ -1,0 +1,107 @@
+.flexrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.flexcolumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@hover: #00fa00;
+@bg: #252323;
+@mainboxbg: #a8a8a83a;
+@boxbg: #a8a8a8d8;
+@content: #ffa500;
+@links: #0000ff;
+
+h1,
+h2,
+h3,
+h4,
+ul,
+ol {
+  margin: 0;
+}
+h2 {
+    font-size: 1.8em;
+    margin: .2em;
+}
+h3 {
+    font-size: 1.3em;
+    margin: .2em;
+}
+a {
+    font-size: 1.2em;
+    color: @links;
+}
+
+* {
+    font-family: "Hermit", "Consolas", "Source Code Pro", monospace;
+}
+html {
+    height: 100%;
+    width: 100%;
+    background: #252323 url("../images/dojo-shinto-lazer.png") center center no-repeat;
+}
+i {
+    color: @content;
+}
+
+body {
+    .flexcolumn();
+
+    .row {
+        .flexrow();
+        // width: 95%;
+        align-items: stretch;
+
+        .column {
+            .flexcolumn();
+            max-width: 60%;
+            min-width: 40%;
+            background-color: @mainboxbg;
+            margin: 1em;
+            border: 3px solid @hover;
+            justify-content: flex-start;
+            padding: .2em;
+
+            .sub-row {
+                .flexrow();
+                flex-wrap: wrap;
+                align-items: flex-start;
+
+                .sub-column {
+                    .flexcolumn();
+                    background-color: @boxbg;
+                    // border: 3px solid @hover;
+                    margin: .5em;
+                    padding: .8em;
+                }
+            }
+        }
+    }
+    .alt-column {
+        .flexcolumn();
+        background-color: @mainboxbg;
+        // width: 95%;
+        border: 3px solid @hover;
+
+        .alt-row {
+            .flexrow();
+            align-items: flex-start;
+            flex-wrap: wrap;
+            padding: .2em;
+
+    
+            .alt-sub-column {
+                .flexcolumn();
+                background-color: @boxbg;
+                margin: .5em;
+                padding: .8em;
+            }
+        }
+    }
+}
