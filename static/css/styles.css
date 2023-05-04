@@ -30,6 +30,9 @@ a {
   font-size: 1.2em;
   color: #0000ff;
 }
+a:hover {
+  color: #00fa00;
+}
 * {
   font-family: "Hermit", "Consolas", "Source Code Pro", monospace;
 }
