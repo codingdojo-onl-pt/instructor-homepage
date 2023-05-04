@@ -57,6 +57,9 @@ body .row {
   align-items: center;
   align-items: stretch;
 }
+body .row .space {
+  margin: auto 1em;
+}
 body .row .column {
   display: flex;
   flex-direction: column;
